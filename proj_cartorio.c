@@ -123,11 +123,12 @@ int main () //Inicio do Menu - Opções
 	
 		setlocale(LC_ALL, "Portuguese"); // Definindo idioma do código
 	
-		printf("\t\t\tCartório EBAC - Zona Eleitoral 065\n\n\n"); // Mensagem inicial ao abrir o programa
+		printf("\t\t\tCartório EBAC - Sistema de Registro de Nomes\n\n\n"); // Mensagem inicial ao abrir o programa
 		printf("Escolha uma opção para prosseguir\n\n"); // Inicio menu
 		printf("\t 1 - Cadastrar um novo usuário\n");
 		printf("\t 2 - Deletar usuários\n");
-		printf("\t 3- Consultar todos os usuários\n\n");
+		printf("\t 3 - Consultar todos os usuários\n");
+		printf("\t 4 - Fechar o programa\n\n");
 		printf("Digite sua opção: "); // Fim menu
 		
 		scanf("%d", &opcao); // Entendendo a opção do usuário
@@ -147,6 +148,12 @@ int main () //Inicio do Menu - Opções
 			case 3: // Opção 3
 				consulta();
 				break;
+			
+			case 4:
+				printf("Obrigado por utilizar o sistema de Registro de Nomes da EBAC!");
+				return 0;
+				break;
+			
 			
 			default: // Opção não existente
 				printf("Oops! Esta opção não existe. Retorne ao Menu e escolha uma opção valida para prosseguir!\n");
