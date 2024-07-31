@@ -149,11 +149,10 @@ int main () //Inicio do Menu - Opções
 				consulta();
 				break;
 			
-			case 4:
+			case 4: // Opção 4
 				printf("Obrigado por utilizar o sistema de Registro de Nomes da EBAC!");
 				return 0;
 				break;
-			
 			
 			default: // Opção não existente
 				printf("Oops! Esta opção não existe. Retorne ao Menu e escolha uma opção valida para prosseguir!\n");
