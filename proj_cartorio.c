@@ -115,54 +115,68 @@ int main () //Inicio do Menu - Opções
 {
 		int opcao=0; // Definição de Variáveis
 		int laco=1;
-
-	for(laco=1;laco=1;) // Looping menu
-	{
-	
-		system("cls");
-	
-		setlocale(LC_ALL, "Portuguese"); // Definindo idioma do código
-	
-		printf("\t\t\tCartório EBAC - Sistema de Registro de Nomes\n\n\n"); // Mensagem inicial ao abrir o programa
-		printf("Escolha uma opção para prosseguir\n\n"); // Inicio menu
-		printf("\t 1 - Cadastrar um novo usuário\n");
-		printf("\t 2 - Deletar usuários\n");
-		printf("\t 3 - Consultar todos os usuários\n");
-		printf("\t 4 - Fechar o programa\n\n");
-		printf("Digite sua opção: "); // Fim menu
 		
-		scanf("%d", &opcao); // Entendendo a opção do usuário
-	
-		system("cls"); // Limpando a poluição da tela
-	
-		switch(opcao) // Escolhas do usuário
+		char senhadigitada[10]="a";
+		int comparacao;
+		
+		printf("Bem vindo ao sistema de Registro de Nomes da EBAC!\n\n");
+		printf("Digite sua senha para utilizar: ");
+		scanf("%s",senhadigitada);
+		
+		comparacao = strcmp(senhadigitada, "admin");
+		
+		if(comparacao == 0)
 		{
-			case 1: // Opção 1
-				cadastro();
-				break;
-				
-			case 2: // Opção 2
-				deletar();
-				break;
-				
-			case 3: // Opção 3
-				consulta();
-				break;
-			
-			case 4: // Opção 4
-				printf("Obrigado por utilizar o sistema de Registro de Nomes da EBAC!");
-				return 0;
-				break;
-			
-			default: // Opção não existente
-				printf("Oops! Esta opção não existe. Retorne ao Menu e escolha uma opção valida para prosseguir!\n");
-				system("pause");
-				break;
-		} // Fim das escolhas
+			system("cls");
+			for(laco=1;laco=1;) // Looping menu
+			{
 	
-
-	}
+				system("cls");
+		
+				setlocale(LC_ALL, "Portuguese"); // Definindo idioma do código
 	
+				printf("\t\t\tCartório EBAC - Sistema de Registro de Nomes\n\n\n"); // Mensagem inicial ao abrir o programa
+				printf("Escolha uma opção para prosseguir\n\n"); // Inicio menu
+				printf("\t 1 - Cadastrar um novo usuário\n");
+				printf("\t 2 - Deletar usuários\n");
+				printf("\t 3 - Consultar todos os usuários\n");
+				printf("\t 4 - Fechar o programa\n\n");
+				printf("Digite sua opção: "); // Fim menu
+		
+				scanf("%d", &opcao); // Entendendo a opção do usuário
+	
+				system("cls"); // Limpando a poluição da tela
+		
+				switch(opcao) // Escolhas do usuário
+				{
+					case 1: // Opção 1
+						cadastro();
+						break;
+				
+					case 2: // Opção 2
+						deletar();
+						break;
+				
+					case 3: // Opção 3
+						consulta();
+						break;
+			
+					case 4: // Opção 4
+						printf("Obrigado por utilizar o sistema de Registro de Nomes da EBAC!");
+						return 0;
+						break;
+				
+					default: // Opção não existente
+						printf("Oops! Esta opção não existe. Retorne ao Menu e escolha uma opção valida para prosseguir!\n");
+						system("pause");
+						break;
+				} // Fim das escolhas
+	
+			}
+		}
+	
+		else
+			printf("Senha incorreta! Tente novamente.");
 	
 }
 
